@@ -24,7 +24,7 @@
   justify-items: center;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 5vh;
-  height: 50vh;
+  height: 60vh;
   justify-content: space-evenly;
   overflow-y: auto;
   padding-bottom: 5vh;
@@ -38,6 +38,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 22vh;
+  height: 25vh;
   width: 15vw;
 }
