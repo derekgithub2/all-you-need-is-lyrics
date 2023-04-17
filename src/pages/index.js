@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Link from 'next/link'
+import Header from '@/components/Header'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,9 +18,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <header className={styles.header}>
-          <h1>🎶All You Need Is... Lyrics🎶</h1>
-        </header>
+        <Header />
         <h4 className={styles.intro}>Pick An Album!</h4>
         <div className={styles.grid}>
           <img src="https://lastfm.freetls.fastly.net/i/u/770x0/9f5df98d096f18e393177402081dc255.jpg#9f5df98d096f18e393177402081dc255" className={styles.card} alt="abbey-road-cover"/>
