@@ -10,7 +10,8 @@ const Quiz = ({trackIDs}) => {
   const router = useRouter()
   
   const getTracks = () => {
-    const url = 'https://api.musixmatch.com/ws/1.1/album.tracks.get?album_id=21119938&page_size=30&apikey=fd99587a1fd9b84d6510e5400010448a'
+    console.log('Current pathname:', router.query.id);
+    const url = `https://api.musixmatch.com/ws/1.1/album.tracks.get?album_id=${router.query.id}&page_size=30&apikey=fd99587a1fd9b84d6510e5400010448a`
     return fetch(url)
     .then(res => {
       if (res.ok) {
@@ -28,11 +29,10 @@ const Quiz = ({trackIDs}) => {
     getTracks()
     .then(data => {
       const trackArr = data.message.body.track_list.map(track => {
-        return track.track.track_id
+        return {trackID: track.track.track_id, trackName: track.track.track_name}
       })
       setTracks(trackArr)
     })
-    console.log('Current pathname:', router.query.id);
   },[]) 
 
 
