@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Link from 'next/link'
+import Header from '@/components/Header'
 import { useState } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -21,9 +22,7 @@ export default function Home () {
       </Head>
 
       <main className={styles.main}>
-        <header className={styles.header}>
-          <h1>🎶All You Need Is... Lyrics🎶</h1>
-        </header>
+        <Header />
         <h4 className={styles.intro}>Pick An Album!</h4>
         <div className={styles.grid}>
           <Link href="/quiz/21119938">
